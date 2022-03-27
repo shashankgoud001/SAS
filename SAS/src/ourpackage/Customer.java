@@ -4,7 +4,7 @@ public class Customer {
     String name;
     String mob_no;
 
-    Customer(String name, String phone_number){
+    Customer(String name, String mob_no){
         this.name = name;
         this.mob_no = mob_no;
     }
@@ -26,7 +26,7 @@ public class Customer {
     }
 
     void display_customer(){
-        System.out.print("Name : "+this.getName());
-        System.out.print("Mobile Numeber : "+this.getMob_no());
+        System.out.println("Name : "+this.getName());
+        System.out.println("Mobile Numeber : "+this.getMob_no());
     }
 }

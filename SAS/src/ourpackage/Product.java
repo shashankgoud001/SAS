@@ -1,5 +1,5 @@
 package ourpackage;
-import org.javatuples.Sextet;
+//import org.javatuples.Sextet;
 
 public class Product {
 
@@ -9,18 +9,18 @@ public class Product {
     int unit_price;
     int no_units_bought;
     int invested_money;
-    Sextet<Integer,Integer,Integer,Integer,Integer,Integer> record;
+//    Sextet<Integer,Integer,Integer,Integer,Integer,Integer> record;
     int units_present;
 
 
-    Product(String name, int code, int weight, int unit_price, int no_units_bought, int invested_money, Sextet<Integer,Integer,Integer,Integer,Integer,Integer> record,int units_present){
+    Product(String name, int code, int weight, int unit_price, int no_units_bought, int invested_money/*, Sextet<Integer,Integer,Integer,Integer,Integer,Integer> record,int units_present*/){
         this.name = name;
         this.code = code;
         this.weight = weight;
         this.unit_price = unit_price;
         this.no_units_bought = no_units_bought;
         this.invested_money = invested_money;
-        this.record = record;
+//        this.record = record;
         this.units_present = units_present;
     }
 
@@ -43,9 +43,9 @@ public class Product {
     void setInvested_money(int invested_money){
         this.invested_money = invested_money;
     }
-    void setRecord(Sextet<Integer,Integer,Integer,Integer,Integer,Integer> record){
-        this.record = record;
-    }
+//    void setRecord(Sextet<Integer,Integer,Integer,Integer,Integer,Integer> record){
+//        this.record = record;
+//    }
     void setUnits_present(int units_present){
         this.units_present = units_present;
     }
@@ -69,9 +69,9 @@ public class Product {
     int getInvested_money(){
         return invested_money;
     }
-    Sextet<Integer,Integer,Integer,Integer,Integer,Integer> getRecord(){
-        return record;
-    }
+//    Sextet<Integer,Integer,Integer,Integer,Integer,Integer> getRecord(){
+//        return record;
+//    }
     int getUnits_present(){
         return units_present;
     }
