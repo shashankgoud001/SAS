@@ -59,7 +59,7 @@ public class DeleteProduct extends javax.swing.JFrame {
         label1.setText("Product Name");
 
         label2.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        label2.setText("Invested amount");
+        label2.setText("Money Spent");
 
         label3.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         label3.setText("Quantity");
@@ -92,9 +92,9 @@ public class DeleteProduct extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(132, 132, 132)
+                        .addGap(133, 133, 133)
                         .addComponent(jLabel2)
-                        .addGap(66, 66, 66)
+                        .addGap(65, 65, 65)
                         .addComponent(textField1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(63, 63, 63)
                         .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -171,7 +171,7 @@ public class DeleteProduct extends javax.swing.JFrame {
 
     private void button3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button3ActionPerformed
         // TODO add your handling code here:
-        setVisible(true);
+        setVisible(false);
         new DeleteProduct().setVisible(true);
     }//GEN-LAST:event_button3ActionPerformed
 

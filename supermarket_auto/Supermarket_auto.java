@@ -12,6 +12,8 @@ package com.mycompany.supermarket_auto;
 public class Supermarket_auto {
 
     public static void main(String[] args) {
+        Login log = new Login();
+        log.setVisible(true);
         System.out.println("Hello World!");
         
     }

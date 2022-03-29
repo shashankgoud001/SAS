@@ -54,7 +54,7 @@ public class Print_inventory extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Product Id", "Product Name", "Amount Invested", "Quantity"
+                "Product Id", "Product Name", "Money Spent", "Quantity"
             }
         ));
         jScrollPane1.setViewportView(jTable1);

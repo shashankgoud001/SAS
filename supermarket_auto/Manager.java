@@ -17,8 +17,15 @@ public int z=0;
      */
     public Manager() {
         initComponents();
-        
-        
+        jButton1.setVisible(false);
+        jButton2.setVisible(false);
+        jButton3.setVisible(false);
+        jButton4.setVisible(false);
+        jButton5.setVisible(false);
+        label1.setVisible(false);
+        label2.setVisible(false);
+        label3.setVisible(false);
+        label4.setVisible(false);
         
     }
 
@@ -72,6 +79,11 @@ public int z=0;
         jButton3.addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentShown(java.awt.event.ComponentEvent evt) {
                 jButton3ComponentShown(evt);
+            }
+        });
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
             }
         });
 
@@ -203,22 +215,74 @@ public int z=0;
 
     private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
         // TODO add your handling code here:
+        if(z==0){
+            try{
+                Thread.sleep(250);
+                jButton1.setVisible(true);
+                label1.setVisible(true);
+            }
+            catch(Exception e){
+                
+            }
+        }
+        else{
+            jButton1.setVisible(false);
+        jButton2.setVisible(false);
+        jButton3.setVisible(false);
+        jButton4.setVisible(false);
+        jButton5.setVisible(false);
+        label1.setVisible(false);
+        label2.setVisible(false);
+        label3.setVisible(false);
+        label4.setVisible(false);
+        z=0;
+        }
     }//GEN-LAST:event_jButton6MouseClicked
 
     private void jButton1ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jButton1ComponentShown
         // TODO add your handling code here:
+        try{
+                Thread.sleep(250);
+                jButton2.setVisible(true);
+                label2.setVisible(true);
+            }
+            catch(Exception e){
+                
+            }
     }//GEN-LAST:event_jButton1ComponentShown
 
     private void jButton2ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jButton2ComponentShown
         // TODO add your handling code here:
+        try{
+                Thread.sleep(250);
+                jButton3.setVisible(true);
+                label3.setVisible(true);
+            }
+            catch(Exception e){
+                
     }//GEN-LAST:event_jButton2ComponentShown
-
+    } 
     private void jButton3ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jButton3ComponentShown
         // TODO add your handling code here:
+        try{
+                Thread.sleep(250);
+                jButton4.setVisible(true);
+                label4.setVisible(true);
+            }
+            catch(Exception e){
+                
+    }                                  
     }//GEN-LAST:event_jButton3ComponentShown
 
     private void jButton4ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jButton4ComponentShown
         // TODO add your handling code here:
+        try{
+                Thread.sleep(250);
+                jButton5.setVisible(true);
+            }
+            catch(Exception e){
+                
+    }                              
     }//GEN-LAST:event_jButton4ComponentShown
 
     private void jButton5ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jButton5ComponentShown
@@ -229,6 +293,11 @@ public int z=0;
         // TODO add your handling code here:
         new Print_inventory().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        new Change_price().setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
