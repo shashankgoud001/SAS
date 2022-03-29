@@ -1,11 +1,11 @@
+import java.sql.*;
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.supermarket_auto;
-
 /**
  *
+
  * @author dharavathyuvaraj
  */
 public class UpdateProduct extends javax.swing.JFrame {
@@ -49,8 +49,19 @@ public class UpdateProduct extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
         jLabel2.setText("Product Id");
 
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+
         button1.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         button1.setLabel("Search");
+        button1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button1ActionPerformed(evt);
+            }
+        });
 
         label1.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         label1.setText("Product Name");
@@ -62,6 +73,11 @@ public class UpdateProduct extends javax.swing.JFrame {
         label3.setText("Quantity");
 
         button2.setLabel("Update");
+        button2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button2ActionPerformed(evt);
+            }
+        });
 
         button3.setLabel("Reset");
         button3.addActionListener(new java.awt.event.ActionListener() {
@@ -79,6 +95,24 @@ public class UpdateProduct extends javax.swing.JFrame {
 
         label5.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         label5.setText("Update Inventory");
+
+        textField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textField1ActionPerformed(evt);
+            }
+        });
+
+        textField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textField2ActionPerformed(evt);
+            }
+        });
+
+        textField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textField3ActionPerformed(evt);
+            }
+        });
 
         jButton1.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
         jButton1.setText("Add Product");
@@ -104,22 +138,13 @@ public class UpdateProduct extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jSeparator3))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(246, 246, 246)
-                        .addComponent(label5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(139, 139, 139)
-                        .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(102, 102, 102)
-                        .addComponent(button3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(114, 114, 114)
-                        .addComponent(button4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 158, Short.MAX_VALUE))
+                .addGap(246, 246, 246)
+                .addComponent(label5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(148, 148, 148)
+                        .addGap(105, 105, 105)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel2)
@@ -143,11 +168,19 @@ public class UpdateProduct extends javax.swing.JFrame {
                                     .addComponent(textField3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(textField1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(197, 197, 197)
+                        .addGap(146, 146, 146)
                         .addComponent(jButton1)
                         .addGap(49, 49, 49)
                         .addComponent(jButton2)))
-                .addContainerGap(156, Short.MAX_VALUE))
+                .addContainerGap(125, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(108, 108, 108)
+                .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(98, 98, 98)
+                .addComponent(button3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(button4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(107, 107, 107))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -178,14 +211,14 @@ public class UpdateProduct extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(button3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(49, 49, 49))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(button4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(button4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap())))
         );
@@ -215,6 +248,81 @@ public class UpdateProduct extends javax.swing.JFrame {
         // TODO add your handling code here:
         new DeleteProduct().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
+        String DB_URL = "jdbc:mysql://localhost:3306/data1";
+         String USER = "root";
+         String PASS = "ssneeraj23";
+         try(
+                 Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
+                 Statement stmt = conn.createStatement();){
+                     String t_id=jTextField1.getText();
+                     String query1="SELECT prod_name,money_spent,units_left FROM product_data WHERE id="+t_id;
+                     ResultSet rs = stmt.executeQuery(query1);
+                     if(rs.next()){
+                     textField1.setText(rs.getString("prod_name"));
+                     int t2= rs.getInt("money_spent");
+                     String t2s=String.valueOf(t2);
+                     textField2.setText(t2s);
+                     int t3= rs.getInt("units_left");
+                     String t3s=String.valueOf(t3);
+                     textField3.setText(t3s);
+                     conn.close();
+                     stmt.close();
+                }}
+                    catch (SQLException e) {
+                        e.printStackTrace();}
+    }//GEN-LAST:event_button1ActionPerformed
+
+    private void textField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textField1ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void textField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textField2ActionPerformed
+
+    private void textField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textField3ActionPerformed
+
+    private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed
+        String DB_URL = "jdbc:mysql://localhost:3306/data1";
+        String USER = "root";
+        String PASS = "ssneeraj23";
+        try(
+                Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
+                Statement stmt = conn.createStatement();){
+                    String t_id=jTextField1.getText();
+                    String mon_sp=textField2.getText();
+                    String quant=textField3.getText();
+                    String query1="SELECT prod_name,money_spent,units_left,units_bought FROM product_data WHERE id="+t_id;
+                    ResultSet rs = stmt.executeQuery(query1);
+                    if(rs.next()){
+                    int t1= rs.getInt("money_spent");
+                    int t2= rs.getInt("units_left");
+                    int t3=rs.getInt("units_bought");
+                    int m1=Integer.parseInt(mon_sp);
+                    int q1=Integer.parseInt(quant);
+                    t3+=q1;
+                    m1+=t1;
+                    q1+=t2;
+                    String query2="UPDATE product_data SET money_spent="+m1+",units_left="+q1+",units_bought="+t3+" WHERE id="+t_id;
+                    stmt.executeUpdate(query2);
+                    conn.close();
+                    stmt.close();
+               }
+               
+
+
+            }
+                   catch (SQLException e) {
+                       e.printStackTrace();}
+    }//GEN-LAST:event_button2ActionPerformed
 
     /**
      * @param args the command line arguments
