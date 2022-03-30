@@ -4,6 +4,8 @@
  */
 package com.mycompany.supermarket_auto;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author dharavathyuvaraj
@@ -55,35 +57,41 @@ public class Employee extends javax.swing.JFrame {
         });
 
         jButton4.setText("Logout");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(461, 461, 461)
-                .addComponent(jButton1)
-                .addGap(101, 101, 101)
-                .addComponent(jButton2)
-                .addGap(114, 114, 114)
-                .addComponent(jButton3)
-                .addContainerGap(361, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton4)
-                .addGap(609, 609, 609))
+                .addContainerGap(466, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jButton4)
+                        .addGap(609, 609, 609))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jButton1)
+                        .addGap(96, 96, 96)
+                        .addComponent(jButton2)
+                        .addGap(113, 113, 113)
+                        .addComponent(jButton3)
+                        .addGap(362, 362, 362))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(63, 63, 63)
+                .addGap(92, 92, 92)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
                     .addComponent(jButton2)
-                    .addComponent(jButton3))
-                .addGap(53, 53, 53)
+                    .addComponent(jButton3)
+                    .addComponent(jButton1))
+                .addGap(71, 71, 71)
                 .addComponent(jButton4)
-                .addContainerGap(606, Short.MAX_VALUE))
+                .addContainerGap(559, Short.MAX_VALUE))
         );
 
         pack();
@@ -91,7 +99,7 @@ public class Employee extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        new update_invent().setVisible(true);
+        new UpdateProduct().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -103,6 +111,15 @@ public class Employee extends javax.swing.JFrame {
         // TODO add your handling code here:
         new DeleteProduct().setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        int a = JOptionPane.showConfirmDialog(null, "Do you really want to logout", "Select",JOptionPane.YES_NO_OPTION);
+        if(a==0){
+            setVisible(false);
+            new Login().setVisible(true); 
+        }
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments

@@ -4,6 +4,8 @@
  */
 package com.mycompany.supermarket_auto;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author dharavathyuvaraj
@@ -27,6 +29,7 @@ public class Sales_clerk extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -37,6 +40,13 @@ public class Sales_clerk extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setText("Logout");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -44,13 +54,17 @@ public class Sales_clerk extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(523, 523, 523)
                 .addComponent(jButton1)
-                .addContainerGap(791, Short.MAX_VALUE))
+                .addGap(148, 148, 148)
+                .addComponent(jButton2)
+                .addContainerGap(571, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(70, 70, 70)
-                .addComponent(jButton1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2))
                 .addContainerGap(675, Short.MAX_VALUE))
         );
 
@@ -61,6 +75,15 @@ public class Sales_clerk extends javax.swing.JFrame {
         // TODO add your handling code here:
         new Billing().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        int a = JOptionPane.showConfirmDialog(null, "Do you really want to logout", "Select",JOptionPane.YES_NO_OPTION);
+        if(a==0){
+            setVisible(false);
+            new Login().setVisible(true); 
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -100,5 +123,6 @@ public class Sales_clerk extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     // End of variables declaration//GEN-END:variables
 }

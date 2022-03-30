@@ -163,7 +163,7 @@ public class Login extends javax.swing.JFrame {
         if(jTextField3.getText().equals("Manager")){
                     if(jTextField2.getText().equals("manager") && jPasswordField1.getText().equals("man123")){
                         setVisible(false);
-                        new Manager().setVisible(true);
+                        new Managerr().setVisible(true);
                         
                     }
                     else

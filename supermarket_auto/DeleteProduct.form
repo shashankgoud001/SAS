@@ -108,7 +108,7 @@
                   <Component id="label2" min="-2" max="-2" attributes="0"/>
                   <Component id="textField3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="39" max="32767" attributes="0"/>
+              <EmptySpace pref="49" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="label3" alignment="1" min="-2" max="-2" attributes="0"/>
                   <Component id="textField4" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -146,6 +146,9 @@
       </Properties>
     </Component>
     <Component class="java.awt.TextField" name="textField1">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textField1ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="java.awt.Button" name="button1">
       <Properties>
@@ -154,6 +157,9 @@
         </Property>
         <Property name="label" type="java.lang.String" value="Search"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button1ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JSeparator" name="jSeparator2">
     </Component>
@@ -182,10 +188,19 @@
       </Properties>
     </Component>
     <Component class="java.awt.TextField" name="textField2">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textField2ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="java.awt.TextField" name="textField3">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textField3ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="java.awt.TextField" name="textField4">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textField4ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JSeparator" name="jSeparator3">
     </Component>
@@ -196,6 +211,9 @@
         </Property>
         <Property name="label" type="java.lang.String" value="Delete"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button2ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="java.awt.Button" name="button3">
       <Properties>

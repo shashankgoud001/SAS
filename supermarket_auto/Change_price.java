@@ -82,6 +82,7 @@ public class Change_price extends javax.swing.JFrame {
         jButton1.setText("Change");
 
         jButton2.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon("/Users/dharavathyuvaraj/Downloads/bms/Reset.png")); // NOI18N
         jButton2.setText("Reset");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -185,7 +186,7 @@ public class Change_price extends javax.swing.JFrame {
                     .addComponent(jButton1)
                     .addComponent(jButton2)
                     .addComponent(jButton3))
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
 
         pack();
