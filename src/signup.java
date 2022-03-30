@@ -309,7 +309,7 @@ public class signup extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(this, "Manager Sorry the username already exists");
                 }else{
 
-                    query = "INSERT INTO users_data(type,user_name,sex,mob_no,username,user_password)" + " VALUES(\"M\",\""+pUsername+"\",'"+pSex+"',\""+pMobileNumber+"\",\""+pUsername+"\",\""+pPassword+"\")";
+                    query = "INSERT INTO users_data(type,user_name,sex,mob_no,username,user_password)" + " VALUES(\"M\",\""+pName+"\",'"+pSex+"',\""+pMobileNumber+"\",\""+pUsername+"\",\""+pPassword+"\")";
                     PreparedStatement preparedStmt = conn.prepareStatement(query);
                     preparedStmt.execute();
                     conn.close();
